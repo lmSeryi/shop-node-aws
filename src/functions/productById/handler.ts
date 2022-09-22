@@ -9,15 +9,15 @@ export const products = async (event) => {
   const { productId } = event.pathParameters;
 
   const productsService = container.get<ProductService>(TYPES.ProductService);
-  const product = await productsService.getById(productId);
+  const productResponse = await productsService.getById(productId);
 
-  if (!product) {
+  if (productResponse.success === false) {
     return formatJSONResponse({
-      message: 'Product not found',
-    }, 404);
+      message: productResponse.message,
+    }, productResponse.code);
   }
   return formatJSONResponse({
-    product,
+    product: productResponse.data,
   });
 };
 

@@ -1,6 +1,9 @@
-export interface BaseService<T> {
-  getAll: () => Promise<T[]>;
+import { BaseResponse } from '../../../interfaces/BaseResponse.interface';
 
-  getById: (id: string) => Promise<T>;
+export interface BaseService<T> {
+
+  getAll: () => Promise<BaseResponse<T[]>>;
+
+  getById: (id: string) => Promise<BaseResponse<T>>;
 
 }

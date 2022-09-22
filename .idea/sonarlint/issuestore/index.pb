@@ -11,12 +11,6 @@ _
 /src/Infrastructure/Repositories/Models/index.ts,b/c/bcefc5eeba7fb62030149492d5e1cb130b820cbd
 q
 Asrc/Infrastructure/Repositories/Models/ProductRepository.model.ts,c/9/c9c62e72b43bb8b181ca6e42c4df8ec61700769a
-S
-#src/interfaces/product.interface.ts,4/8/484ea59659b84b83d61dedb3fc7b1b7632a86901
-g
-7src/Application/Services/Models/ProductService.model.ts,2/8/28af7447bd0ff25373b13f3bcb9adabfe28f22fe
-X
-(src/Application/Services/Models/index.ts,c/3/c3a004f424145f40ae39e397679ec34a5076df20
 B
 src/libs/lambda.ts,b/2/b287f08391f101dc392cb22e4c33c872a556ebc3
 L
