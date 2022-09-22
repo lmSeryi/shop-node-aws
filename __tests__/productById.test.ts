@@ -1,3 +1,4 @@
+import { describe, test, expect } from '@jest/globals';
 import { productsMock } from '../src/libs/products';
 import { products }  from '../src/functions/productById/handler';
 
@@ -11,7 +12,7 @@ describe('Get all products', () => {
   }
 
   const toFind = productsMock.find((product) => product.id === productId);
-  
+
   test('The function should return data', async () => {
     const response = await products(event);
     const { product: data } = JSON.parse(response.body);

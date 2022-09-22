@@ -1,7 +1,9 @@
+import { injectable } from 'inversify';
 import { ProductRepository as ProductRepositoryModel } from './Models'
 import { Product } from 'src/interfaces';
 
-export default class ProductRepository implements ProductRepositoryModel {
+@injectable()
+export class ProductRepository implements ProductRepositoryModel {
   products: Product[] = [
     {
       id: '1',
@@ -28,8 +30,7 @@ export default class ProductRepository implements ProductRepositoryModel {
   }
 
   getById(id: string): Promise<Product> {
-    const product = this.products.find(p => p.id === id)
-    return Promise.resolve(product);
+    return Promise.resolve(this.products.find(p => p.id === id))
   }
 
 }

@@ -1,12 +1,15 @@
 import { formatJSONResponse } from '@libs/api-gateway';
 import { middyfy } from '@libs/lambda';
 
-import { productsMock } from '@libs/products';
+import { container } from '../../../inversify.config';
+import { ProductService } from '../../Application/Services';
+import { TYPES } from '../../../types';
 
 export const products = async (event) => {
   const { productId } = event.pathParameters;
 
-  const product = productsMock.find((product) => product.id === productId);
+  const productsService = container.get<ProductService>(TYPES.ProductService);
+  const product = await productsService.getById(productId);
 
   if (!product) {
     return formatJSONResponse({
