@@ -1,1 +1,1 @@
-export * from './product.interface'
+export * from './BaseResponse.interface'
