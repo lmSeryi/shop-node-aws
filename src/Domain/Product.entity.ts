@@ -1,10 +1,11 @@
-import { ProductEntity as ProductEntityModel } from './models';
+import { Product } from './models';
 
-export default class ProductEntity implements ProductEntityModel {
+export default class ProductEntity implements Product {
   id: string;
   name: string;
   description: string;
   price: number;
+  quantity: number;
   createdAt: Date;
   updatedAt: Date;
 }

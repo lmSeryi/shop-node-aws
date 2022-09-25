@@ -1,9 +1,11 @@
 # Serverless - AWS Node.js Typescript
 
+### AWS URL
+> [Products URL](https://iyjbw08u1d.execute-api.us-east-1.amazonaws.com/dev/products)
+
 ### Swagger URL
 
 > [API Documentation](https://app.swaggerhub.com/apis-docs/Seryi/shop-node-aws/1.0.0)
-
 
 ### Testing framework
 > Jest

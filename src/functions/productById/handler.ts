@@ -16,9 +16,7 @@ export const products = async (event) => {
       message: productResponse.message,
     }, productResponse.code);
   }
-  return formatJSONResponse({
-    product: productResponse.data,
-  });
+  return formatJSONResponse(productResponse.data);
 };
 
 export const main = middyfy(products);

@@ -1,9 +1,9 @@
 import { injectable, inject } from 'inversify';
 import { ProductService as ProductServiceModel } from './Models';
-import { Product } from 'src/interfaces';
 import { TYPES } from '../../../types';
 import { ProductRepository } from '../../Infrastructure/Repositories/Models';
-import { BaseResponse } from '../../interfaces/BaseResponse.interface';
+import { BaseResponse } from '../../interfaces';
+import { Product } from '../../Domain/models';
 
 @injectable()
 export class ProductService implements ProductServiceModel {
